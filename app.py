@@ -10,7 +10,7 @@ def mike():
     all_posts = Post.select()
     return render_template("index.html", posts=all_posts)
 
-@app.route('/create', methods=('GET', 'POST'))
+@app.route('/create/', methods=('GET', 'POST'))
 def create():
     if request.method == 'POST':
         title = request.form['title']
