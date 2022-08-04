@@ -15,10 +15,14 @@ def create():
     if request.method == 'POST':
         title = request.form['title']
         description = request.form['description']
+        username = request.form['username']
+        email = request.form['email']
 
         Post.create(
             title = title,
-            description = description
+            description = description,
+            username = username,
+            email = email,
         )
         return redirect('/')
     return render_template('create.html')

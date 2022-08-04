@@ -7,10 +7,17 @@
     <title>asfd</title>
 </head>
 <body>
+
     {% for post in posts %}
+    <div style="background-color: blueviolet;
+    border-color: black; width: 20%;">
     <h1>{{post.title}}</h1>
     <p>{{post.date}}</p>
     <p>{{post.description}}</p>
+    <p>{{post.username}}</p>
+    <p>{{post.email}}</p>
+    </div>
     {% endfor %}
+    <p><a href="/create/">Create New Post</a></p>
 </body>
 </html>
